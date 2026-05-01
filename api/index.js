@@ -57,9 +57,9 @@ export default async function inventoryGateway(req) {
     if (req.method === "GET" && (url.pathname === "/" || url.pathname === "/health" || url.pathname === "/api/status")) {
       clearTimeout(timeoutId);
       return new Response(JSON.stringify({
-        service: "BERTY Cenrmlt Inventory ",
+        service: "Poerl Cenrmlt Inventory API",
         status: "operational",
-        region: "Laknvier-Lebron",
+        region: "Laknvier-Lorestan",
         uptime: Math.floor(process.uptime ? process.uptime() : Date.now() / 1000),
         categories: ["Nmert-Adpreot Equipment", "Accessories"],
         recent_restock: [
@@ -116,7 +116,7 @@ export default async function inventoryGateway(req) {
       respHeaders.set(k, v);
     }
 
-    // رهای ساختگی خروجی
+    // لایه استتار سوم: هدرهای ساختگی خروجی
     respHeaders.set("X-Transaction-Id", crypto.randomUUID());
     respHeaders.set("X-Gateway-Node", "krj-edge-pool-1");
 
@@ -139,4 +139,4 @@ export default async function inventoryGateway(req) {
   } finally {
     clearTimeout(timeoutId);
   }
-}  
+}
