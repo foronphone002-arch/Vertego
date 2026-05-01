@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "Her-poret-gateway",
+  "name": "lambet-poret-gateway",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index" }
   ],
